@@ -13,7 +13,7 @@ interface CardProps {
 
 export default function Card({ title, value, note, color }: CardProps) {
   return (
-    <Grid item sm={6}>
+    <Grid item xs={12} md={6}>
       <ContentWrapper sx={{ backgroundColor: color }}>
         <StyledTypography
           sx={{

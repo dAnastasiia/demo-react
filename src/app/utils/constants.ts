@@ -1,4 +1,5 @@
 export const MAIN_FONT_SIZE = 14;
+export const DEFAULT_CURRENCY = "$";
 export const COLORS = {
   violet: "#4B49AC",
   lightViolet: "#7978E9",

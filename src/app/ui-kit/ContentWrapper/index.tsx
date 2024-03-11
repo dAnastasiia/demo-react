@@ -31,26 +31,28 @@ export default function ContentWrapper({
         ...sx,
       }}
     >
-      <Stack mb={3}>
-        {title && (
-          <Typography
-            component="h2"
-            variant="h5"
-            sx={{
-              textTransform: "capitalize",
-              fontWeight: 600,
-            }}
-          >
-            {title}
-          </Typography>
-        )}
+      {(title || description) && (
+        <Stack mb={3}>
+          {title && (
+            <Typography
+              component="h2"
+              variant="h5"
+              sx={{
+                textTransform: "capitalize",
+                fontWeight: 600,
+              }}
+            >
+              {title}
+            </Typography>
+          )}
 
-        {description && (
-          <Typography variant="body1" sx={{ lineHeight: 1.17 }}>
-            {description}
-          </Typography>
-        )}
-      </Stack>
+          {description && (
+            <Typography variant="body1" sx={{ lineHeight: 1.17 }}>
+              {description}
+            </Typography>
+          )}
+        </Stack>
+      )}
 
       {children}
     </Paper>
