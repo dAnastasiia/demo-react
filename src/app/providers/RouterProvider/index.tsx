@@ -1,7 +1,9 @@
 import { Navigate, useRoutes } from "react-router-dom";
 
-import { MainLayout } from "@/layouts";
 import { AppRoutes } from "@/constants";
+import { MainLayout } from "@/layouts";
+
+import NotFoundPage from "@/pages/NotFoundPage";
 
 export default function RouterProvider() {
   const { home, dashboard, companies } = AppRoutes;
@@ -25,6 +27,6 @@ export default function RouterProvider() {
       ],
     },
 
-    { path: "*", element: <p>not found</p> },
+    { path: "*", element: <NotFoundPage /> },
   ]);
 }
