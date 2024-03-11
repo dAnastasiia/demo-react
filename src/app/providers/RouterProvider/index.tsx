@@ -3,10 +3,11 @@ import { Navigate, useRoutes } from "react-router-dom";
 import { AppRoutes } from "@/constants";
 import { MainLayout } from "@/layouts";
 
+import DashboardPage from "@/pages/DashboardPage";
 import NotFoundPage from "@/pages/NotFoundPage";
 
 export default function RouterProvider() {
-  const { home, dashboard, companies } = AppRoutes;
+  const { home, dashboard, users } = AppRoutes;
 
   return useRoutes([
     {
@@ -18,11 +19,11 @@ export default function RouterProvider() {
         },
         {
           path: dashboard,
-          element: <p>dashboard</p>,
+          element: <DashboardPage />,
         },
         {
-          path: companies,
-          element: <p>companies</p>,
+          path: users,
+          element: <p>users</p>,
         },
       ],
     },

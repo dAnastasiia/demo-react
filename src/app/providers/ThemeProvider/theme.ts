@@ -1,20 +1,16 @@
-import { MAIN_FONT_SIZE } from "@/utils/constants";
 import { alpha, createTheme } from "@mui/material/styles";
 
-import { colors } from "./colors";
+import { COLORS, MAIN_FONT_SIZE } from "@/utils/constants";
 
 const theme = createTheme();
+
 export const defaultTheme = createTheme({
   palette: {
     primary: {
-      main: colors.main,
+      main: COLORS.violet,
     },
 
-    background: { default: alpha(colors.background, 0.5) },
-
-    success: { main: colors.success },
-    error: { main: colors.error },
-    warning: { main: colors.warning },
+    background: { default: alpha(COLORS.lightViolet, 0.15) },
   },
 
   typography: {
@@ -22,6 +18,8 @@ export const defaultTheme = createTheme({
   },
 
   components: {
+    MuiStack: { defaultProps: { spacing: 2 } },
+    MuiGrid: { defaultProps: { spacing: 2 } },
     MuiButton: {
       defaultProps: {
         variant: "contained",
@@ -47,7 +45,7 @@ export const defaultTheme = createTheme({
         {
           props: { variant: "outlined" },
           style: {
-            borderColor: colors.main,
+            borderColor: COLORS.violet,
           },
         },
       ],

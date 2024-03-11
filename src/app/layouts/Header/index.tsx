@@ -1,10 +1,9 @@
-import { AppBar, Avatar, Stack, useTheme } from "@mui/material";
+import { AppBar, Stack } from "@mui/material";
 
 import { HEADER_HEIGHT, OPENED_SIDEBAR_WIDTH } from "../constants";
+import UserMenu from "./model/UserMenu";
 
 export default function Header() {
-  const { palette } = useTheme();
-
   return (
     <AppBar
       sx={{
@@ -23,12 +22,7 @@ export default function Header() {
           justifyContent: "flex-end",
         }}
       >
-        <Avatar
-          sx={{
-            color: palette.primary.main,
-            backgroundColor: palette.common.white,
-          }}
-        />
+        <UserMenu />
       </Stack>
     </AppBar>
   );

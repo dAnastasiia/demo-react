@@ -7,7 +7,7 @@ import {
 import { AppRoutes } from "@/constants";
 import { Page } from "./types";
 
-const { dashboard, companies } = AppRoutes;
+const { dashboard, users } = AppRoutes;
 
 export const pages: Page[] = [
   {
@@ -17,8 +17,8 @@ export const pages: Page[] = [
   },
   {
     icon: <PeopleIcon />,
-    textKey: "Companies",
-    href: companies,
+    textKey: "Users",
+    href: users,
   },
   {
     icon: <NotFoundIcon />,
