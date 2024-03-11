@@ -1,6 +1,8 @@
-import { ReactNode } from 'react';
-import { CssBaseline, ThemeProvider as MuiThemeProvider } from '@mui/material';
-import { defaultTheme } from './theme';
+import { ReactNode } from "react";
+
+import { CssBaseline, ThemeProvider as MuiThemeProvider } from "@mui/material";
+
+import { defaultTheme } from "./theme";
 
 interface ThemeProviderProps {
   children: ReactNode;
