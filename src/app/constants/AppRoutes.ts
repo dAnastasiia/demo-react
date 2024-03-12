@@ -3,7 +3,6 @@ interface Routes {
 }
 
 export const AppRoutes: Routes = {
-  ghPages: "/demo-react",
   home: "/",
   dashboard: "dashboard",
   users: "users",
