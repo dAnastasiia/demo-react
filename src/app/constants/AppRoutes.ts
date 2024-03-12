@@ -5,5 +5,5 @@ interface Routes {
 export const AppRoutes: Routes = {
   home: "/",
   dashboard: "dashboard",
-  companies: "companies",
+  users: "users",
 };

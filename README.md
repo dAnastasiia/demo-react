@@ -1,10 +1,10 @@
 # React + React MUI Admin Panel Demo
 
-This demo showcases a slice of an admin panel built with React and Material-UI (MUI). It features custom input components, a dynamic chart, a responsive table, and navigation between two distinct routes. Ideal for developers looking for a modern, sleek design in admin interfaces with the flexibility of React.
+This demo showcases a slice of an admin panel built with React and Material-UI (MUI). It features custom button component, a dynamic chart, a responsive table, and navigation between two distinct routes. Ideal for developers looking for a modern, sleek design in admin interfaces with the flexibility of React.
 
 ## Features
 
-- Custom Inputs: Tailored input components for enhanced user interaction.
+- Custom Button: Designed button setups.
 - Dynamic Chart: Visually represent data in real-time.
 - Responsive Table: Display complex datasets with ease.
 - Navigation: Smooth routing between two simulated pages.
