@@ -2,7 +2,7 @@
   "name": "demo-react",
   "version": "0.1.0",
   "private": true,
-  "homepage": "https://dAnastasiia.github.io/demo-react",
+  "homepage": ".",
   "scripts": {
     "start": "craco start",
     "build": "craco build",
