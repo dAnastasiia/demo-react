@@ -6,8 +6,8 @@ export default function UserIcon() {
   return (
     <Avatar
       sx={{
-        width: 40,
-        height: 40,
+        width: 32,
+        height: 32,
         color: palette.primary.main,
         backgroundColor: palette.common.white,
       }}

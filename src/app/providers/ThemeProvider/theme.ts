@@ -50,5 +50,22 @@ export const defaultTheme = createTheme({
         },
       ],
     },
+
+    MuiCssBaseline: {
+      styleOverrides: `
+        ::-webkit-scrollbar {
+          width: 8px;
+        }
+        ::-webkit-scrollbar-track {
+          border-radius: 4px;
+        }
+        ::-webkit-scrollbar-thumb {
+          background: ${COLORS.violet};
+          border-radius: 4px;
+        }
+        ::-webkit-scrollbar-thumb:hover {
+          background: ${COLORS.lightViolet};
+        }`,
+    },
   },
 });

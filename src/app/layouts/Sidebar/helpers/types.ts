@@ -3,3 +3,7 @@ export interface Page {
   href: string;
   icon?: React.ReactNode;
 }
+
+export interface SectionProps extends Page {
+  onClick: () => void;
+}

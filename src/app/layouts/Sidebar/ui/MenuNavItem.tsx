@@ -3,19 +3,29 @@ import { useLocation, useNavigate } from "react-router-dom";
 
 import { alpha, ListItemButton, ListItemText, useTheme } from "@mui/material";
 
-import { Page } from "../helpers/types";
+import { SectionProps } from "../helpers/types";
 
-export default function MenuNavItem({ textKey, href, icon }: Page) {
+export default function MenuNavItem({
+  textKey,
+  href,
+  icon,
+  onClick,
+}: SectionProps) {
   const navigate = useNavigate();
   const { palette, spacing } = useTheme();
 
   const { pathname } = useLocation();
   const isActive = useMemo(() => pathname.includes(href), [pathname, href]);
 
+  const handleClick = () => {
+    navigate(href);
+    onClick();
+  };
+
   return (
     <ListItemButton
       focusRipple
-      onClick={() => navigate(href)}
+      onClick={handleClick}
       sx={{
         width: spacing(34.25),
         py: 1.5,

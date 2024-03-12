@@ -1,40 +1,78 @@
-import { Drawer, List } from "@mui/material";
+import { Box, Drawer, List } from "@mui/material";
 
-import { OPENED_SIDEBAR_WIDTH } from "../constants";
+import { DRAWER_WIDTH } from "../constants";
 import { DRAWER_RADIUS, pages, SIDEBAR_PADDING } from "./helpers";
 import { SidebarMenuItem } from "./ui";
 
-export default function Sidebar() {
-  return (
-    <Drawer
-      variant="permanent"
-      open
-      elevation={10}
+interface SidebarProps {
+  mobileOpen: boolean;
+  handleDrawerClose: () => void;
+  handleDrawerTransitionEnd: () => void;
+}
+
+export default function Sidebar({
+  mobileOpen,
+  handleDrawerClose,
+  handleDrawerTransitionEnd,
+}: SidebarProps) {
+  const drawer = (
+    <List
+      component="ul"
       sx={{
-        width: OPENED_SIDEBAR_WIDTH,
-      }}
-      PaperProps={{
-        sx: {
-          width: OPENED_SIDEBAR_WIDTH,
-          borderTopRightRadius: DRAWER_RADIUS,
-          borderBottomRightRadius: DRAWER_RADIUS,
-        },
+        flexGrow: 1,
+        backgroundColor: "inherit",
+        p: SIDEBAR_PADDING,
       }}
     >
-      <List
-        component="nav"
+      {pages.map((data) => (
+        <SidebarMenuItem
+          key={data.textKey}
+          {...data}
+          onClick={handleDrawerClose}
+        />
+      ))}
+    </List>
+  );
+
+  return (
+    <Box
+      component="nav"
+      sx={{ width: { md: DRAWER_WIDTH }, flexShrink: { md: 0 } }}
+      aria-label="mailbox folders"
+    >
+      <Drawer
+        variant="temporary"
+        open={mobileOpen}
+        onTransitionEnd={handleDrawerTransitionEnd}
+        onClose={handleDrawerClose}
+        elevation={10}
+        ModalProps={{ keepMounted: true }}
         sx={{
-          flexGrow: 1,
-          backgroundColor: "inherit",
-          p: SIDEBAR_PADDING,
+          display: { xs: "block", md: "none" },
+          "& .MuiDrawer-paper": {
+            boxSizing: "border-box",
+            width: DRAWER_WIDTH,
+            borderBottomRightRadius: DRAWER_RADIUS,
+          },
         }}
       >
-        <List disablePadding>
-          {pages.map((data) => (
-            <SidebarMenuItem key={data.textKey} {...data} />
-          ))}
-        </List>
-      </List>
-    </Drawer>
+        {drawer}
+      </Drawer>
+
+      <Drawer
+        variant="permanent"
+        open
+        sx={{
+          display: { xs: "none", md: "block" },
+          "& .MuiDrawer-paper": {
+            boxSizing: "border-box",
+            width: DRAWER_WIDTH,
+            borderBottomRightRadius: DRAWER_RADIUS,
+          },
+        }}
+      >
+        {drawer}
+      </Drawer>
+    </Box>
   );
 }
