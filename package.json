@@ -2,11 +2,14 @@
   "name": "demo-react",
   "version": "0.1.0",
   "private": true,
+  "homepage": "https://dAnastasiia.github.io/demo-react",
   "scripts": {
     "start": "craco start",
     "build": "craco build",
     "test": "craco test",
-    "eject": "craco eject"
+    "eject": "craco eject",
+    "predeploy": "npm run build",
+    "deploy": "gh-pages -d build"
   },
   "dependencies": {
     "@emotion/react": "^11.11.4",
@@ -30,7 +33,9 @@
     "web-vitals": "^2.1.4"
   },
   "devDependencies": {
-    "@craco/craco": "^7.1.0"
+    "@babel/plugin-proposal-private-property-in-object": "^7.21.11",
+    "@craco/craco": "^7.1.0",
+    "gh-pages": "^6.1.1"
   },
   "eslintConfig": {
     "extends": [
