@@ -5,6 +5,7 @@ import { MainLayout } from "@/layouts";
 
 import DashboardPage from "@/pages/DashboardPage";
 import NotFoundPage from "@/pages/NotFoundPage";
+import UsersPage from "@/pages/UsersPage";
 
 export default function RouterProvider() {
   const { home, dashboard, users } = AppRoutes;
@@ -23,7 +24,7 @@ export default function RouterProvider() {
         },
         {
           path: users,
-          element: <p>users</p>,
+          element: <UsersPage />,
         },
       ],
     },
