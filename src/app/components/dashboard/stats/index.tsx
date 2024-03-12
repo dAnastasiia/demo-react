@@ -1,6 +1,7 @@
 import { Grid } from "@mui/material";
 
 import { COLORS } from "@/utils/constants";
+
 import Card from "./model/Card";
 
 export default function Stats() {
