@@ -8,14 +8,14 @@ This demo showcases a slice of an admin panel built with React, Typescript and M
 
 ## Features
 
-- Custom Button: Designed button setups.
-- Dynamic Chart: Visually represent data.
-- Responsive Table: Display complex datasets with ease.
-- Navigation: Smooth routing between simulated pages + responsive Header and Sidebar implementation.
+- **Custom Button**: Designed button setups.
+- **Dynamic Chart**: Visually represent data.
+- **Responsive Table**: Display complex datasets with ease.
+- **Navigation**: Smooth routing between simulated pages + responsive Header and Sidebar implementation.
 
 ## Technologies
 
-- React: A JavaScript library for building user interfaces.
-- React MUI: A comprehensive library of Material Design components for React.
-- Material-react-table: A comprehensive library for creating custom tables.
-- Chart.js + react-chartjs-2: Chart libraries for creating data visualization.
+- **React**: A JavaScript library for building user interfaces.
+- **React MUI**: A comprehensive library of Material Design components for React.
+- **Material-react-table**: A comprehensive library for creating custom tables.
+- **Chart.js + react-chartjs-2**: Chart libraries for creating data visualization.
