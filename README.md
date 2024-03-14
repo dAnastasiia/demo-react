@@ -12,6 +12,7 @@ This demo showcases a slice of an admin panel built with React, Typescript and M
 - **Dynamic Chart**: Visually represent data.
 - **Responsive Table**: Display complex datasets with ease.
 - **Navigation**: Smooth routing between simulated pages + responsive Header and Sidebar implementation.
+- **Unit Testing with Jest**: Comprehensive unit testing setup for ensuring code quality and reliability.
 
 ## Technologies
 
@@ -19,3 +20,4 @@ This demo showcases a slice of an admin panel built with React, Typescript and M
 - **React MUI**: A comprehensive library of Material Design components for React.
 - **Material-react-table**: A comprehensive library for creating custom tables.
 - **Chart.js + react-chartjs-2**: Chart libraries for creating data visualization.
+- **Jest**: A delightful JavaScript testing framework with a focus on simplicity. Jest is well-suited for unit testing React components, ensuring code reliability and quality throughout development.
