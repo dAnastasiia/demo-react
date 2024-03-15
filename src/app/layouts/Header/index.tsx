@@ -32,8 +32,8 @@ export default function Header({ handleDrawerToggle }: HeaderProps) {
       position="fixed"
       sx={{
         height: HEADER_HEIGHT,
-        width: { md: `calc(100% - ${DRAWER_WIDTH}px)` },
-        ml: { md: `${DRAWER_WIDTH}px` },
+        width: { lg: `calc(100% - ${DRAWER_WIDTH}px)` },
+        ml: { lg: `${DRAWER_WIDTH}px` },
         justifyContent: "center",
         background: isScrolled ? "primary" : "transparent",
 
@@ -44,7 +44,7 @@ export default function Header({ handleDrawerToggle }: HeaderProps) {
         sx={{
           px: 3,
           alignItems: "center",
-          justifyContent: { xs: "space-between", md: "flex-end" },
+          justifyContent: { xs: "space-between", lg: "flex-end" },
         }}
       >
         <IconButton
@@ -52,7 +52,7 @@ export default function Header({ handleDrawerToggle }: HeaderProps) {
           aria-label="open drawer"
           edge="start"
           onClick={handleDrawerToggle}
-          sx={{ mr: 2, display: { md: "none" } }}
+          sx={{ mr: 2, display: { lg: "none" } }}
         >
           <MenuIcon
             color="primary"

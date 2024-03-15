@@ -26,7 +26,9 @@ export default function ExternalLayout({
           minHeight: "100vh",
         }}
       >
-        <Typography variant="h4">{title}</Typography>
+        <Typography variant="h5" fontWeight={600}>
+          {title}
+        </Typography>
         <Typography>{description}</Typography>
 
         <Button onClick={() => navigate(-1)}>Go back</Button>

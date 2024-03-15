@@ -18,8 +18,8 @@ export const defaultTheme = createTheme({
   },
 
   components: {
-    MuiStack: { defaultProps: { spacing: 2 } },
-    MuiGrid: { defaultProps: { spacing: 2 } },
+    MuiStack: { defaultProps: { spacing: 3 } },
+    MuiGrid: { defaultProps: { spacing: 3 } },
     MuiButton: {
       defaultProps: {
         variant: "contained",

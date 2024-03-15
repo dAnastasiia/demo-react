@@ -37,7 +37,7 @@ export default function Sidebar({
   return (
     <Box
       component="nav"
-      sx={{ width: { md: DRAWER_WIDTH }, flexShrink: { md: 0 } }}
+      sx={{ width: { lg: DRAWER_WIDTH }, flexShrink: { lg: 0 } }}
       aria-label="mailbox folders"
     >
       <Drawer
@@ -48,7 +48,7 @@ export default function Sidebar({
         elevation={10}
         ModalProps={{ keepMounted: true }}
         sx={{
-          display: { xs: "block", md: "none" },
+          display: { xs: "block", lg: "none" },
           "& .MuiDrawer-paper": {
             boxSizing: "border-box",
             width: DRAWER_WIDTH,
@@ -63,7 +63,7 @@ export default function Sidebar({
         variant="permanent"
         open
         sx={{
-          display: { xs: "none", md: "block" },
+          display: { xs: "none", lg: "block" },
           "& .MuiDrawer-paper": {
             boxSizing: "border-box",
             width: DRAWER_WIDTH,
