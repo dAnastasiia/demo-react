@@ -1,12 +1,27 @@
-import { Grid } from "@mui/material";
+import { Box, useTheme } from "@mui/material";
 
 import { COLORS } from "@/utils/constants";
 
 import Card from "./model/Card";
 
 export default function Stats() {
+  const { breakpoints } = useTheme();
+
   return (
-    <Grid container>
+    <Box
+      height={1}
+      sx={{
+        display: "grid",
+        gridTemplateColumns: "repeat(1, 1fr)",
+        gridTemplateRows: "repeat(1, 1fr)",
+        gap: 2,
+
+        [breakpoints.up("md")]: {
+          gridTemplateColumns: "repeat(2, 1fr)",
+          gridTemplateRows: "repeat(2, 1fr)",
+        },
+      }}
+    >
       <Card
         title="Today's bookings"
         value={4006}
@@ -34,6 +49,6 @@ export default function Stats() {
         note="0.22% (30 days)"
         color={COLORS.coral}
       />
-    </Grid>
+    </Box>
   );
 }
