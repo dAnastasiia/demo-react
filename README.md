@@ -4,7 +4,7 @@
 
 ## Overview
 
-This demo showcases a slice of an admin panel built with React, Typescript and Material-UI (MUI). It features custom button component, a dynamic chart, a responsive table, and navigation between two distinct routes. Ideal for developers looking for a modern, sleek design in admin interfaces with the flexibility of React.
+[This demo](https://demo-react-hqrp7avsz-danastasiias-projects.vercel.app/) showcases a slice of an admin panel built with React, Typescript and Material-UI (MUI). It features custom button component, a dynamic chart, a responsive table, and navigation between two distinct routes. Ideal for developers looking for a modern, sleek design in admin interfaces with the flexibility of React.
 
 ## Features
 
